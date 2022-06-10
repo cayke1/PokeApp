@@ -1,0 +1,25 @@
+.rankingBack {
+    max-width: 25%;
+    min-width: 15%;
+    height: 35vh;
+    background-color: #9200c2cb;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.20rem;
+    border-radius: 10%;
+    border: 2px solid #75fee4;
+}
+
+.rankingBack ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.player {
+    margin: 1rem 0.1rem;
+    color: orange;
+}
