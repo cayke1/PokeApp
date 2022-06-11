@@ -1,0 +1,41 @@
+.gameContent {
+    width: 500px;
+    height: 200px;
+    background-color: #9200c2cb;
+    border: 2px solid #75fee4;
+    border-radius: 15px;
+    text-align: center;
+    padding: 3em;
+    color: white;
+}
+
+.buttons {
+    margin-left: 1rem;
+}
+
+#btn-2 {
+    animation-duration: 2s;
+    animation-name: colorize;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes colorize {
+    from {
+        background-color: transparent;
+        border: 2px solid #75fee4;
+        color: orange;
+    }
+    to {
+        background-color: #75fee4;
+        color: black;
+    }
+}
+
+.reloadIcon {
+    margin-left: 1rem;
+}
+
+#counter {
+    color: orange;
+}
