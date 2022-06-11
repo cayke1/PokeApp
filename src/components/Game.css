@@ -39,3 +39,10 @@
 #counter {
     color: orange;
 }
+
+
+/* MODAL */
+
+.close {
+    cursor: pointer;
+}
