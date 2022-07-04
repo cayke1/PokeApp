@@ -3,8 +3,7 @@ import Modal from 'react-modal';
 import './Game.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSync } from '@fortawesome/free-solid-svg-icons';
-
-
+import { ResponseModal } from './ResponseModal';
 
 
 const customStyles = {
@@ -46,7 +45,7 @@ export function Game() {
             .then((data) => {
                 setPokemonName(data.forms[0].name);
                 setPokemonImage(data.sprites.other['official-artwork'].front_default);
-                console.log(pokemonName.toString())
+                console.log(pokemonName.toString());
             }).catch(err => setError(err));
 }, [count, reload]);
 
@@ -60,11 +59,13 @@ export function Game() {
 
     function checkResponse () {
         if (resValue.toString() === pokemonName.toString()) {
-            alert('ok');
+            const Response = new ResponseModal('success', "You done, it's ", pokemonName.toString() );
+            Response.success();
             setCount(count + 100);
         }
-        else {
-            alert('wrote');
+        else {  
+            const Response = new ResponseModal('error', "Wrong, try again");
+            Response.fail();
             setCount(count * 0);
         }
     }
