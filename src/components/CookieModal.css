@@ -1,0 +1,15 @@
+.modal-title {
+    text-align: center;
+    color: orange;
+}
+
+.modal-text {
+    color: orange;
+    padding: 1rem;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
