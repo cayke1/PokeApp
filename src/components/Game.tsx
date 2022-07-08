@@ -4,6 +4,7 @@ import './Game.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSync } from '@fortawesome/free-solid-svg-icons';
 import { ResponseModal } from './ResponseModal';
+import { NameModal } from './NameModal';
 
 
 const customStyles = {
@@ -83,8 +84,11 @@ export function Game() {
         setModalOpen(false);
     }
     
+
+    const name = localStorage.getItem('nickname');
     return (
         <div className='gameContent'>
+            {name? '' : <NameModal />}
             <p id='bestStreak'></p>
             <h2>Who is that pokemon?</h2>
             <h4 id='counter'>{count}</h4>

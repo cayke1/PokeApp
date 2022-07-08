@@ -10,6 +10,11 @@
 
 .modal-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.modal-input {
+    max-width: 400px;
 }
